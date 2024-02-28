@@ -28,7 +28,7 @@ python cradlenet/scripts/inference/ecg_tabular.py \
   --filter_size 16 \
   --binary \
 \
-  --checkpoint 'echonext_multilabel_train_half1/best_checkpoint_27_validation_loss=-0.7351.pt'
+  --checkpoint 'echonext_multilabel_train_half1/best_checkpoint_23_validation_loss=-0.8331.pt'
 
 python run_metrics.py \
 \
