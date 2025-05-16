@@ -16,7 +16,7 @@ All xmls are expected in a flat folder in a single directory with `*.xml` file n
    - tr_max_gte_32
    - shd
 
-   Note: if the xml data has already been preprocessed into numpy feature arrays, skip to step C. to run inference.
+   **Note**: If the xml data has already been preprocessed into numpy waveform and feature arrays, skip to step C. to run inference.
 
 ## II. Docker and All-in-One Command
 
