@@ -16,6 +16,8 @@ All xmls are expected in a flat folder in a single directory with `*.xml` file n
    - tr_max_gte_32
    - shd
 
+   Note: if the xml data has already been preprocessed into numpy feature arrays, skip to step C. to run inference.
+
 ## II. Docker and All-in-One Command
 
 ### A. Building Docker file.
@@ -112,14 +114,14 @@ python cradlenet/scripts/inference/ecg_tabular.py \
     --filter_size 16 \
     --binary \
   \
-    --checkpoint /path/to/best/model/checkpoint.pt
+    --checkpoint /path/to/model/checkpoint.pt
 ```
 
 Input arguments:  
 `--features_path`: path to the waveforms.npy file created by the preprocessing step  
 `--tabular_path`: path to the tabular_features.npy file created by the preprocessing step   
 `--output_dir`: output directory to save prediction scores  
-`--checkpoint`: path to provided model checkpoint. default: `echonext_multilabel_train_half1/best_checkpoint_27_validation_loss=-0.7351.pt`
+`--checkpoint`: path to provided model weights. default: `models/echonext_multilabel_minimodel/weights.pt`
 
 Output: `${output_dir}/prediction_loop/probs.npy`   
 Shape of the output: N x 12, with each column representing prediction scores for one of the 12 disease labels listed below (in the same order): 

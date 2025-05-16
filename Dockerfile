@@ -14,3 +14,5 @@ RUN pip install torch==2.0.1 torchvision==0.15.2
 VOLUME ["/xml_input", "/processed_data", "/results"]
 
 CMD ["/bin/sh", "runall.sh"]
+
+
